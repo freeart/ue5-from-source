@@ -49,6 +49,11 @@ Open `UE5.sln` → set Solution Configuration to `Debug Editor` (full engine deb
 - Right-click `.uproject` → Generate Visual Studio project files
 - Open your project's `.sln`, pick `DebugGame Editor` or `Debug Editor`
 
+Alternatively, generate project files directly from the command line, pointing at the engine's `GenerateProjectFiles.bat` with your project path:
+```
+"<EngineRoot>\Engine\Build\BatchFiles\GenerateProjectFiles.bat" -project="<PathToProject>\YourProject.uproject" -game -progress
+```
+
 ## 7. Launching
 - Double-clicking `.uproject` may fail ("Failed to launch editor") if version selector isn't registered — run `UnrealVersionSelector-Win64-Shipping.exe /register` as admin, or launch directly:
 ```
