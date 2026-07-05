@@ -54,3 +54,4 @@ Open `UE5.sln` → set Solution Configuration to `Debug Editor` (full engine deb
 ```
 Engine\Binaries\Win64\UnrealEditor.exe "path\to\YourProject.uproject"
 ```
+- Double-click launch uses `UnrealEditor.exe` (no suffix), which is only produced by a `Development Editor` build. If you only built `Debug Editor`/`DebugGame Editor`, that exe won't exist and double-click will fail even with a correct `EngineAssociation` GUID registered in `HKEY_CURRENT_USER\SOFTWARE\Epic Games\Unreal Engine\Builds`. Build `Development Editor` once to get double-click launching working, or just launch the suffixed exe (`UnrealEditor-Win64-Debug.exe`, etc.) directly.
